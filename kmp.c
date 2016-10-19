@@ -87,10 +87,15 @@ int main (int argc, char *argv[])
     plen = strlen (argv[1]);
     next = malloc (sizeof (int) * plen);
     init_next (argv[1], plen, next);
+    for (i = 0; i < plen; ++i)
+    {
+        printf ("%-2c ", argv[1][i]);
+    }
+    printf ("\n");
 
     for (i = 0; i < plen; ++i)
     {
-        printf ("%d\t", next[i]);
+        printf ("%-2d ", next[i]);
     }
     printf ("\n");
 
